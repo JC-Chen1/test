@@ -1618,100 +1618,6 @@
                     </div>
                 </div>
 
-                <!-- GPT-5 Model Card -->
-                <div class="model-card">
-                    <div class="model-header">
-                        <div class="model-name">GPT-5</div>
-                        <div class="model-score low">
-                            <svg class="score-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span data-i18n="casestudy.gpt5.score" data-i18n-zh="0.3 分" data-i18n-en="0.3 pts">0.3 分</span>
-                        </div>
-                    </div>
-
-                    <!-- Answer Section -->
-                    <div class="answer-section">
-                        <div class="answer-title" data-i18n="casestudy.answer.title" data-i18n-zh="答案" data-i18n-en="Answer">答案</div>
-                        <div class="answer-content">
-                            <div class="answer-item">(1) $F_{\mathrm{s}}^{\star} = A S_c/4$</div>
-                            <div class="answer-item">(2) $X^{\star} = A/(4\rho g)$</div>
-                            <div class="answer-item">(3) $W^{\star} = A^2 S_c/(4\rho g)$</div>
-                            <div class="answer-item">(4) $W^{\star} \approx 9.9$ mJ</div>
-                        </div>
-                    </div>
-
-                    <!-- Evaluation Section -->
-                    <div class="evaluation-section">
-                        <div class="evaluation-title" data-i18n="casestudy.evaluation.title" data-i18n-zh="评分详情" data-i18n-en="Evaluation">评分详情</div>
-                        <div class="evaluation-criteria">
-                            <div class="criterion-item">
-                                <svg class="criterion-icon correct" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span data-i18n="casestudy.gpt5.eval1" data-i18n-zh="给出摩擦功表达式 $W = 4 F_s X$ (0.2分)" data-i18n-en="Friction work expression $W = 4 F_s X$ (0.2 pt)">给出摩擦功表达式 $W = 4 F_s X$ (0.2分)</span>
-                            </div>
-                            <div class="criterion-item">
-                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                                <span data-i18n="casestudy.gpt5.eval2" data-i18n-zh="未给出正确约束条件 (0分)" data-i18n-en="Incorrect constraint condition (0 pt)">未给出正确约束条件 (0分)</span>
-                            </div>
-                            <div class="criterion-item">
-                                <svg class="criterion-icon correct" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span data-i18n="casestudy.gpt5.eval3" data-i18n-zh="推导最优位移 $X^{\star} = \frac{A}{4\rho g}$ (0.1分)" data-i18n-en="Optimal displacement $X^{\star} = \frac{A}{4\rho g}$ (0.1 pt)">推导最优位移 $X^{\star} = \frac{A}{4\rho g}$ (0.1分)</span>
-                            </div>
-                            <div class="criterion-item">
-                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                                <span data-i18n="casestudy.gpt5.eval4" data-i18n-zh="摩擦力结果错误，应为 $\frac{A S_c}{2}$ 而非 $\frac{A S_c}{4}$ (0分)" data-i18n-en="Incorrect friction force, should be $\frac{A S_c}{2}$ not $\frac{A S_c}{4}$ (0 pt)">摩擦力结果错误，应为 $\frac{A S_c}{2}$ 而非 $\frac{A S_c}{4}$ (0分)</span>
-                            </div>
-                            <div class="criterion-item">
-                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                                <span data-i18n="casestudy.gpt5.eval5" data-i18n-zh="功的表达式错误，应为 $\frac{A^2 S_c}{2\rho g}$ (0分)" data-i18n-en="Incorrect work expression, should be $\frac{A^2 S_c}{2\rho g}$ (0 pt)">功的表达式错误，应为 $\frac{A^2 S_c}{2\rho g}$ (0分)</span>
-                            </div>
-                            <div class="criterion-item">
-                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                                <span data-i18n="casestudy.gpt5.eval6" data-i18n-zh="数值结果不在正确范围 [19, 21] mJ (0分)" data-i18n-en="Numerical value outside correct range [19, 21] mJ (0 pt)">数值结果不在正确范围 [19, 21] mJ (0分)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Solution Toggle -->
-                    <div class="solution-section">
-                        <button class="solution-toggle" onclick="toggleSolution('gpt5-solution')">
-                            <span data-i18n="casestudy.solution.toggle" data-i18n-zh="查看完整解答" data-i18n-en="View Full Solution">查看完整解答</span>
-                            <svg class="solution-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="solution-content" id="gpt5-solution">
-                            <div class="solution-inner">
-                                <p>I will not provide my internal chain-of-thought. Below is a concise, step-by-step solution.</p>
-                                <p>Over one period $\tau_1$ the mass travels from $-X$ to $+X$ and back, so the total sliding distance is $4X$. With Coulomb friction of magnitude $F_s$, the energy dissipated each period is:</p>
-                                <p>$$W = 4 F_s X$$</p>
-                                <p>The device works (mass shuttles between the two stops) if the atmospheric-pressure drive $A$ can overcome both the friction threshold and the hydrostatic restoring contribution when the mass is at a stop. Using the parameters defined in the statement:</p>
-                                <p>$$\xi \simeq \frac{2}{S_c}\frac{F_s}{A}, \quad \lambda \simeq \frac{2\rho g X}{A}$$</p>
-                                <p>The border of the working domain is $\xi + \lambda = 1$. To maximize $W = 4 F_s X$ for fixed $A$ under this linear constraint, the optimum occurs for $\xi = \lambda = 1/2$.</p>
-                                <p>Hence:</p>
-                                <p>$F_s^*$ from $\xi^* = 1/2$: $\frac{2}{S_c}\frac{F_s^*}{A} = \frac{1}{2} \Rightarrow F_s^* = \frac{A S_c}{4}$</p>
-                                <p>$X^*$ from $\lambda^* = 1/2$: $\frac{2\rho g X^*}{A} = \frac{1}{2} \Rightarrow X^* = \frac{A}{4\rho g}$</p>
-                                <p>Maximum dissipated energy per period:</p>
-                                <p>$$W^* = 4 F_s^* X^* = 4 \times \frac{A S_c}{4} \times \frac{A}{4\rho g} = \frac{A^2 S_c}{4\rho g}$$</p>
-                                <p>Numerical value with $A = 5.0 \times 10^2$ Pa, $S_c = 210$ cm² = $2.10 \times 10^{-2}$ m², $\rho \approx 13.6 \times 10^3$ kg·m⁻³, $g = 9.8$ m·s⁻²:</p>
-                                <p>$$W^* \approx \frac{(5.0 \times 10^2)^2 \times 2.10 \times 10^{-2}}{4 \times 13.6 \times 10^3 \times 9.8} \approx 9.9 \times 10^{-3} \, \text{J} = 9.9 \, \text{mJ}$$</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Gemini-2.5-Pro Model Card -->
                 <div class="model-card">
                     <div class="model-header">
@@ -1817,6 +1723,100 @@
                                 <p><strong>Step 4: Numerical Calculation</strong></p>
                                 <p>Given: $A = 5 \times 10^2$ Pa = 500 Pa, $S_c = 210$ cm² = $2.10 \times 10^{-2}$ m², $g = 9.8$ m·s⁻², $\rho \approx 13600$ kg·m⁻³</p>
                                 <p>$$W^{\star} = \frac{(500)^2 (2.10 \times 10^{-2})}{2 (13600) (9.8)} \approx 0.0197 \, \text{J} = 19.7 \, \text{mJ}$$</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GPT-5 Model Card -->
+                <div class="model-card">
+                    <div class="model-header">
+                        <div class="model-name">GPT-5</div>
+                        <div class="model-score low">
+                            <svg class="score-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span data-i18n="casestudy.gpt5.score" data-i18n-zh="0.3 分" data-i18n-en="0.3 pts">0.3 分</span>
+                        </div>
+                    </div>
+
+                    <!-- Answer Section -->
+                    <div class="answer-section">
+                        <div class="answer-title" data-i18n="casestudy.answer.title" data-i18n-zh="答案" data-i18n-en="Answer">答案</div>
+                        <div class="answer-content">
+                            <div class="answer-item">(1) $F_{\mathrm{s}}^{\star} = A S_c/4$</div>
+                            <div class="answer-item">(2) $X^{\star} = A/(4\rho g)$</div>
+                            <div class="answer-item">(3) $W^{\star} = A^2 S_c/(4\rho g)$</div>
+                            <div class="answer-item">(4) $W^{\star} \approx 9.9$ mJ</div>
+                        </div>
+                    </div>
+
+                    <!-- Evaluation Section -->
+                    <div class="evaluation-section">
+                        <div class="evaluation-title" data-i18n="casestudy.evaluation.title" data-i18n-zh="评分详情" data-i18n-en="Evaluation">评分详情</div>
+                        <div class="evaluation-criteria">
+                            <div class="criterion-item">
+                                <svg class="criterion-icon correct" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span data-i18n="casestudy.gpt5.eval1" data-i18n-zh="给出摩擦功表达式 $W = 4 F_s X$ (0.2分)" data-i18n-en="Friction work expression $W = 4 F_s X$ (0.2 pt)">给出摩擦功表达式 $W = 4 F_s X$ (0.2分)</span>
+                            </div>
+                            <div class="criterion-item">
+                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span data-i18n="casestudy.gpt5.eval2" data-i18n-zh="未给出正确约束条件 (0分)" data-i18n-en="Incorrect constraint condition (0 pt)">未给出正确约束条件 (0分)</span>
+                            </div>
+                            <div class="criterion-item">
+                                <svg class="criterion-icon correct" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span data-i18n="casestudy.gpt5.eval3" data-i18n-zh="推导最优位移 $X^{\star} = \frac{A}{4\rho g}$ (0.1分)" data-i18n-en="Optimal displacement $X^{\star} = \frac{A}{4\rho g}$ (0.1 pt)">推导最优位移 $X^{\star} = \frac{A}{4\rho g}$ (0.1分)</span>
+                            </div>
+                            <div class="criterion-item">
+                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span data-i18n="casestudy.gpt5.eval4" data-i18n-zh="摩擦力结果错误，应为 $\frac{A S_c}{2}$ 而非 $\frac{A S_c}{4}$ (0分)" data-i18n-en="Incorrect friction force, should be $\frac{A S_c}{2}$ not $\frac{A S_c}{4}$ (0 pt)">摩擦力结果错误，应为 $\frac{A S_c}{2}$ 而非 $\frac{A S_c}{4}$ (0分)</span>
+                            </div>
+                            <div class="criterion-item">
+                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span data-i18n="casestudy.gpt5.eval5" data-i18n-zh="功的表达式错误，应为 $\frac{A^2 S_c}{2\rho g}$ (0分)" data-i18n-en="Incorrect work expression, should be $\frac{A^2 S_c}{2\rho g}$ (0 pt)">功的表达式错误，应为 $\frac{A^2 S_c}{2\rho g}$ (0分)</span>
+                            </div>
+                            <div class="criterion-item">
+                                <svg class="criterion-icon incorrect" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span data-i18n="casestudy.gpt5.eval6" data-i18n-zh="数值结果不在正确范围 [19, 21] mJ (0分)" data-i18n-en="Numerical value outside correct range [19, 21] mJ (0 pt)">数值结果不在正确范围 [19, 21] mJ (0分)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solution Toggle -->
+                    <div class="solution-section">
+                        <button class="solution-toggle" onclick="toggleSolution('gpt5-solution')">
+                            <span data-i18n="casestudy.solution.toggle" data-i18n-zh="查看完整解答" data-i18n-en="View Full Solution">查看完整解答</span>
+                            <svg class="solution-toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="solution-content" id="gpt5-solution">
+                            <div class="solution-inner">
+                                <p>I will not provide my internal chain-of-thought. Below is a concise, step-by-step solution.</p>
+                                <p>Over one period $\tau_1$ the mass travels from $-X$ to $+X$ and back, so the total sliding distance is $4X$. With Coulomb friction of magnitude $F_s$, the energy dissipated each period is:</p>
+                                <p>$$W = 4 F_s X$$</p>
+                                <p>The device works (mass shuttles between the two stops) if the atmospheric-pressure drive $A$ can overcome both the friction threshold and the hydrostatic restoring contribution when the mass is at a stop. Using the parameters defined in the statement:</p>
+                                <p>$$\xi \simeq \frac{2}{S_c}\frac{F_s}{A}, \quad \lambda \simeq \frac{2\rho g X}{A}$$</p>
+                                <p>The border of the working domain is $\xi + \lambda = 1$. To maximize $W = 4 F_s X$ for fixed $A$ under this linear constraint, the optimum occurs for $\xi = \lambda = 1/2$.</p>
+                                <p>Hence:</p>
+                                <p>$F_s^*$ from $\xi^* = 1/2$: $\frac{2}{S_c}\frac{F_s^*}{A} = \frac{1}{2} \Rightarrow F_s^* = \frac{A S_c}{4}$</p>
+                                <p>$X^*$ from $\lambda^* = 1/2$: $\frac{2\rho g X^*}{A} = \frac{1}{2} \Rightarrow X^* = \frac{A}{4\rho g}$</p>
+                                <p>Maximum dissipated energy per period:</p>
+                                <p>$$W^* = 4 F_s^* X^* = 4 \times \frac{A S_c}{4} \times \frac{A}{4\rho g} = \frac{A^2 S_c}{4\rho g}$$</p>
+                                <p>Numerical value with $A = 5.0 \times 10^2$ Pa, $S_c = 210$ cm² = $2.10 \times 10^{-2}$ m², $\rho \approx 13.6 \times 10^3$ kg·m⁻³, $g = 9.8$ m·s⁻²:</p>
+                                <p>$$W^* \approx \frac{(5.0 \times 10^2)^2 \times 2.10 \times 10^{-2}}{4 \times 13.6 \times 10^3 \times 9.8} \approx 9.9 \times 10^{-3} \, \text{J} = 9.9 \, \text{mJ}$$</p>
                             </div>
                         </div>
                     </div>
