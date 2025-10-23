@@ -1109,6 +1109,83 @@
                 padding: var(--space-md);
             }
         }
+        
+        /* Citation Section */
+        .citation-section {
+            margin-top: var(--space-4xl);
+            padding: var(--space-2xl) var(--space-xl);
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+        }
+        
+        .citation-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .citation-bibtex-wrapper {
+            position: relative;
+        }
+        
+        .citation-bibtex-content {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-medium);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            padding-top: var(--space-3xl);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            overflow-x: auto;
+            white-space: pre;
+        }
+        
+        .citation-copy-btn {
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
+            padding: 6px 12px;
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-medium);
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all var(--duration-fast) var(--easing-default);
+        }
+        
+        .citation-copy-btn:hover {
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            border-color: var(--primary-500);
+        }
+        
+        .citation-copy-btn.copied {
+            background: var(--bg-surface);
+            color: var(--primary-400);
+            border-color: var(--primary-500);
+        }
+        
+        @media (max-width: 767px) {
+            .citation-section {
+                padding: var(--space-lg) var(--space-md);
+            }
+            
+            .citation-bibtex-content {
+                font-size: 12px;
+                padding: var(--space-2xl) var(--space-md) var(--space-md);
+            }
+            
+            .citation-copy-btn {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1745,6 +1822,27 @@
                     </div>
                 </div>
             </div>
+
+        <!-- Citation Section -->
+        <div class="citation-section">
+            <h3 class="citation-title" 
+                data-i18n="citation.title"
+                data-i18n-zh="引用"
+                data-i18n-en="Citation">引用</h3>
+            
+            <div class="citation-bibtex-wrapper">
+                <button class="citation-copy-btn" onclick="copyBibtex()" 
+                        data-i18n="citation.copy"
+                        data-i18n-zh="复制"
+                        data-i18n-en="Copy">复制</button>
+                <div class="citation-bibtex-content" id="bibtexContent">@misc{p12025,
+    title={P1: Mastering Physics Olympiads with Reinforcement Learning},
+    author={P1 Team},
+    year={2025},
+    url={https://prime-rl.github.io/P1/}
+}</div>
+            </div>
+        </div>
     </main>
 
     <!-- Lightbox -->
@@ -1903,6 +2001,28 @@
                     });
                 }
             }
+        }
+        
+        // Copy BibTeX citation
+        function copyBibtex() {
+            const bibtexContent = document.getElementById('bibtexContent').textContent;
+            const button = event.target;
+            
+            navigator.clipboard.writeText(bibtexContent).then(function() {
+                const originalText = button.textContent;
+                const currentLang = localStorage.getItem('site_lang') || 'en';
+                button.textContent = currentLang === 'zh' ? '已复制' : 'Copied';
+                button.classList.add('copied');
+                
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+                const currentLang = localStorage.getItem('site_lang') || 'en';
+                alert(currentLang === 'zh' ? '复制失败，请手动复制' : 'Copy failed, please copy manually');
+            });
         }
         
         function openLightbox(element) {
