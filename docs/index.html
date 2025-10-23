@@ -647,6 +647,23 @@
             }
         }
         
+        /* Responsive iframe/image switching */
+        .chart-mobile-img {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 1023px) {
+            .chart-iframe-wrapper {
+                display: none !important;
+            }
+            
+            .chart-mobile-img {
+                display: block;
+            }
+        }
+        
         /* Animations */
         @keyframes fadeIn {
             from { 
@@ -870,6 +887,7 @@
             <div class="chart-iframe-wrapper" style="padding-bottom: 45%; position: relative; overflow: hidden;">
                 <iframe class="chart-iframe" src="source_html/ipho25_purple.html" title="International Physics Olympiad 2025 (IPhO 2025)" loading="lazy" scrolling="no" style="overflow: hidden; width: 100%; height: 100%;"></iframe>
             </div>
+            <img class="chart-mobile-img" src="source_png/ipho25_purple.png" alt="International Physics Olympiad 2025 (IPhO 2025)">
         </div>
 
         <div class="content-section" style="margin-top: 2rem;">
@@ -968,24 +986,28 @@
                 <div class="chart-iframe-wrapper">
                     <iframe class="chart-iframe" src="source_html_new/30b_length_final_new.html" title="P1-30B Response Length Training Curve" loading="lazy"></iframe>
                 </div>
+                <img class="chart-mobile-img" src="source_png/30b_length_final_new.png" alt="P1-30B Response Length Training Curve">
             </div>
 
             <div class="interactive-chart-container">
                 <div class="chart-iframe-wrapper">
                     <iframe class="chart-iframe" src="source_html_new/30b_ipho25_final_new.html" title="P1-30B IPhO 2025 Score Training Curve" loading="lazy"></iframe>
                 </div>
+                <img class="chart-mobile-img" src="source_png/30b_ipho25_final_new.png" alt="P1-30B IPhO 2025 Score Training Curve">
             </div>
 
             <div class="interactive-chart-container">
                 <div class="chart-iframe-wrapper">
                     <iframe class="chart-iframe" src="source_html_new/235b_length_final_new.html" title="P1-235B Response Length Training Curve" loading="lazy"></iframe>
                 </div>
+                <img class="chart-mobile-img" src="source_png/235b_length_final_new.png" alt="P1-235B Response Length Training Curve">
             </div>
 
             <div class="interactive-chart-container">
                 <div class="chart-iframe-wrapper">
                     <iframe class="chart-iframe" src="source_html_new/235b_ipho25_final_new.html" title="P1-235B IPhO 2025 Score Training Curve" loading="lazy"></iframe>
                 </div>
+                <img class="chart-mobile-img" src="source_png/235b_ipho25_final_new.png" alt="P1-235B IPhO 2025 Score Training Curve">
             </div>
         </div>
 
@@ -1095,6 +1117,7 @@
             <div class="chart-iframe-wrapper" style="max-width:1000px; margin: 0 auto; padding-bottom: 35%;">
                 <iframe class="chart-iframe" src="source_html/general_30b.html" title="P1-30B vs Qwen3-30B Performance Comparison" loading="lazy"></iframe>
             </div>
+            <img class="chart-mobile-img" src="source_png/general_30b.png" alt="P1-30B vs Qwen3-30B Performance Comparison" style="max-width:1000px; margin: 0 auto;">
             <div class="chart-caption" style="font-size: 18px; font-weight: 600;" data-i18n="img.general.caption" data-i18n-zh="P1-30B 通用能力对比" data-i18n-en="P1-30B general capability comparison">P1-30B 通用能力对比</div>
         </div>
 
@@ -1106,6 +1129,7 @@
             <div class="chart-iframe-wrapper" style="max-width:1000px; margin: 0 auto; padding-bottom: 35%;">
                 <iframe class="chart-iframe" src="source_html/general_235b.html" title="P1-235B vs Qwen3-235B Performance Comparison" loading="lazy"></iframe>
             </div>
+            <img class="chart-mobile-img" src="source_png/general_235b.png" alt="P1-235B vs Qwen3-235B Performance Comparison" style="max-width:1000px; margin: 0 auto;">
             <div class="chart-caption" style="font-size: 18px; font-weight: 600;" data-i18n="img.general235b.caption" data-i18n-zh="P1-235B 通用能力对比" data-i18n-en="P1-235B general capability comparison">P1-235B 通用能力对比</div>
         </div>
     </main>
