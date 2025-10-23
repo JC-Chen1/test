@@ -1796,6 +1796,13 @@
                 if (backTop) backTop.setAttribute('aria-label', lang === 'zh' ? '回到顶部' : 'Back to top');
                 const lbClose = document.querySelector('.lightbox-close');
                 if (lbClose) lbClose.setAttribute('aria-label', lang === 'zh' ? '关闭' : 'Close');
+                
+                // Trigger MathJax rendering after translations are applied
+                if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+                    MathJax.typesetPromise().catch(function (err) {
+                        console.log('MathJax typeset error: ' + err.message);
+                    });
+                }
             }
 
             function setActiveButton(lang) {
@@ -1851,11 +1858,31 @@
                 if (zhBtn) zhBtn.addEventListener('click', () => switchLanguage('zh'));
                 if (enBtn) enBtn.addEventListener('click', () => switchLanguage('en'));
                 setTimeout(() => { if (window.buildTOC) { try { window.buildTOC(); } catch {} } }, 0);
+                
+                // Ensure MathJax renders after initial load
+                setTimeout(() => {
+                    if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+                        MathJax.typesetPromise().catch(function (err) {
+                            console.log('MathJax initial typeset error: ' + err.message);
+                        });
+                    }
+                }, 100);
             });
 
             // expose for debugging
             window.switchLanguage = switchLanguage;
         })();
+        
+        // Ensure MathJax renders after window load (when MathJax script is fully loaded)
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+                    MathJax.typesetPromise().catch(function (err) {
+                        console.log('MathJax window load typeset error: ' + err.message);
+                    });
+                }
+            }, 200);
+        });
         
         // Toggle solution visibility
         function toggleSolution(solutionId) {
