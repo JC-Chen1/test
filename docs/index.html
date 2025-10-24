@@ -502,6 +502,66 @@
             margin: var(--space-lg) 0;
         }
         
+        /* Model Download Section */
+        .model-download-section {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: var(--space-lg) 0;
+        }
+        
+        .model-download-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .model-download-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-top: var(--space-sm);
+            justify-content: center;
+        }
+        
+        .model-download-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-md);
+            padding: 10px 16px;
+            text-decoration: none;
+            transition: all var(--duration-normal) var(--easing-default);
+        }
+        
+        .model-download-card:hover {
+            border-color: var(--primary-500);
+            background: var(--bg-card);
+            transform: translateY(-1px);
+        }
+        
+        .huggingface-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        
+        .model-download-card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .model-download-card-subtitle {
+            display: none;
+        }
+        
         .btn-external {
             display: inline-flex;
             align-items: center;
@@ -799,6 +859,15 @@
                 flex-direction: column;
             }
             
+            .model-download-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .model-download-card {
+                flex: 0 1 auto;
+            }
+            
             .lightbox-close {
                 top: var(--space-md);
                 right: var(--space-md);
@@ -894,9 +963,40 @@
         }
         
         .case-study-problem-content {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.8;
             color: var(--text-secondary);
+        }
+        
+        .case-study-problem-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: var(--space-lg);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .case-study-problem-content h4:first-child {
+            margin-top: 0;
+        }
+        
+        .case-study-problem-content ul {
+            margin: var(--space-sm) 0;
+            padding-left: var(--space-xl);
+        }
+        
+        .case-study-problem-content li {
+            margin: var(--space-xs) 0;
+        }
+        
+        .case-study-problem-content .problem-question {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            background: var(--bg-surface);
+            border-left: 3px solid var(--primary-500);
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--text-primary);
         }
         
         .models-grid {
@@ -1264,10 +1364,26 @@
                data-i18n-zh="此外，研究团队提出的<strong>协同进化多智能体系统 PhysicsMinions</strong>，为模型性能带来了显著提升。当 P1 模型与 PhysicsMinions 协同工作后，不仅在 <strong>IPhO 2025</strong> 中达到AI模型的世界第一，更在 <strong>HiPhO 综合得分上实现世界第一</strong>，以<strong>38.4分</strong>的成绩超越了<strong>Gemini-2.5-Pro（37.7分）</strong> 和 <strong>GPT-5（37.4分）</strong>，展现出&quot;模型+系统&quot;框架在应对复杂科学问题方面的强大通用性与潜力。"
                data-i18n-en="The team also proposes <strong>PhysicsMinions</strong>, a co-evolution multi-agent system that significantly boosts performance. With PhysicsMinions, P1 reaches No.1 among AI models at <strong>IPhO 2025</strong> and tops the <strong>HiPhO overall score</strong> with <strong>38.4</strong>, surpassing <strong>Gemini-2.5-Pro (37.7)</strong> and <strong>GPT-5 (37.4)</strong>, demonstrating the strong generality of the &quot;model + system&quot; paradigm for complex scientific problems."></p> -->
         </div>
-
+        
+        <!-- Model Download Section -->
+        <div class="model-download-section">
+            <div class="model-download-links">
+                <a href="https://huggingface.co/PRIME-RL/P1-235B-A22B" class="model-download-card" target="_blank" rel="noopener noreferrer">
+                    <img src="imgs/hf-logo.png" alt="Hugging Face" class="huggingface-icon">
+                    <span class="model-download-card-title">P1-235B-A22B</span>
+                </a>
+                <a href="https://huggingface.co/PRIME-RL/P1-30B-A3B" class="model-download-card" target="_blank" rel="noopener noreferrer">
+                    <img src="imgs/hf-logo.png" alt="Hugging Face" class="huggingface-icon">
+                    <span class="model-download-card-title">P1-30B-A3B</span>
+                </a>
+            </div>
+        </div>
+        
         <h2 data-i18n="section.fullstack.title"
             data-i18n-zh="P1系列"
             data-i18n-en="P1 Series">P1系列</h2>
+
+        
 
         <h3 data-i18n="section.hipho.title"
             data-i18n-zh="首个物理奥赛基准测试：HiPhO"
@@ -1505,9 +1621,13 @@
                      data-i18n-zh="问题 (IPhO 2025 Q2_C4)"
                      data-i18n-en="Problem (IPhO 2025 Q2_C4)">问题 (IPhO 2025 Q2_C4)</div>
                 <div class="case-study-problem-content">
-                    <p data-i18n="casestudy.problem.content"
-                       data-i18n-zh="考虑 $S_{\mathrm{b}} \simeq S_{\mathrm{c}}$ 和 $S_{\mathrm{t}} \ll S_{\mathrm{b}}$，确定 (1) $F_{\mathrm{s}}^{\star}$ 和 (2) $X^{\star}$ 关于 $\rho, g, S_{\mathrm{c}}$ 和 $A$ 的表达式。(3) 表达相应的最大能量 $W^{\star}$，(4) 然后在 $A = 5 \times 10^{2} \mathrm{Pa}$ 时计算其以 $\mathrm{mJ}$ 为单位的数值。"
-                       data-i18n-en="Considering $S_{\mathrm{b}} \simeq S_{\mathrm{c}}$ and $S_{\mathrm{t}} \ll S_{\mathrm{b}}$, determine the expressions for (1) $F_{\mathrm{s}}^{\star}$ and (2) $X^{\star}$ as functions of $\rho, g, S_{\mathrm{c}}$ and $A$. (3) Express the corresponding maximum energy $W^{\star}$, (4) then calculate its numerical value in $\mathrm{mJ}$ with $A = 5 \times 10^{2} \mathrm{Pa}$.">考虑 $S_{\mathrm{b}} \simeq S_{\mathrm{c}}$ 和 $S_{\mathrm{t}} \ll S_{\mathrm{b}}$，确定 (1) $F_{\mathrm{s}}^{\star}$ 和 (2) $X^{\star}$ 关于 $\rho, g, S_{\mathrm{c}}$ 和 $A$ 的表达式。(3) 表达相应的最大能量 $W^{\star}$，(4) 然后在 $A = 5 \times 10^{2} \mathrm{Pa}$ 时计算其以 $\mathrm{mJ}$ 为单位的数值。</p>
+                    <div data-i18n="casestudy.problem.background"
+                         data-i18n-zh="<h4>背景：Cox 的时钟</h4><p>1765年，英国钟表匠 James Cox 发明了一种唯一能量来源是大气压波动的时钟。Cox 的时钟使用两个装有水银的容器。大气压的变化导致水银在容器之间移动，两个容器相对移动，这种运动为实际时钟提供能量。</p><h4>Part C - Cox 的时钟简化模型</h4><p>我们研究一个简化版本，包括：</p><ul><li>一个圆柱形底部水槽，装有水银浴</li><li>一个双部分气压管，浸入水银浴中（完全排空空气）</li><li>水槽和双部分管各由一根缆绳悬挂，两根缆绳通过理想滑轮系统连接到同一个质量为 $M$ 的物体，该物体可在水平表面上滑动</li><li>系统中水银的总体积为 $V_{\ell} = 5 \mathrm{L}$</li></ul><p>质量 $M$ 的位置由其质心坐标 $x$ 表示。考虑水平支撑面与质量 $M$ 之间的固体摩擦，滑动时的摩擦力大小记为 $F_{\mathrm{s}}$。两个挡块限制质量 $M$ 的位移为 $-X \leq x \leq X$（$X > 0$）。</p><p><strong>系统参数：</strong></p><ul><li>水槽：高度 $H_{\mathrm{c}} = 30 \mathrm{cm}$，截面积 $S_{\mathrm{c}} = 210 \mathrm{cm}^{2}$</li><li>管状部分：高度 $H_{\mathrm{t}} = 80 \mathrm{cm}$，截面积 $S_{\mathrm{t}} = 5 \mathrm{cm}^{2}$</li><li>球状部分：高度 $H_{\mathrm{b}} = 20 \mathrm{cm}$，截面积 $S_{\mathrm{b}} = 200 \mathrm{cm}^{2}$</li><li>大气压振幅 $A = 5 \times 10^{2} \mathrm{Pa}$，周期 $\tau_{1} = 1$ 周</li></ul><p>在实际的 Cox 时钟中，机构提供的能量通过棘轮系统储存并用于提升配重。在这个简化模型中，时钟回收的能量对应于水平表面对质量 $M$ 施加的摩擦力所耗散的能量。记 $W$ 为一个周期 $\tau_{1}$ 内固体摩擦力耗散的能量。在其他条件不变的情况下，可以调整 $F_{\mathrm{s}}$ 和 $X$ 来最大化能量 $W$；我们将最优情况下的各自值记为 $F_{\mathrm{s}}^{\star}$ 和 $X^{\star}$。</p>"
+                         data-i18n-en="<h4>Background: Cox's Timepiece</h4><p>In 1765, British clockmaker James Cox invented a clock whose only source of energy is the fluctuations in atmospheric pressure. Cox's clock used two vessels containing mercury. Changes in atmospheric pressure caused mercury to move between the vessels, and the two vessels to move relative to each other. This movement acted as an energy source for the actual clock.</p><h4>Part C - Simplified Model of Cox's Timepiece</h4><p>We study a simplified version consisting of:</p><ul><li>A cylindrical bottom cistern containing a mercury bath</li><li>A two-part barometric tube dipped into the bath (completely emptied of air)</li><li>The cistern and tube are each suspended by a cable; both cables pass through a system of ideal pulleys and attach to either side of the same mass $M$, which can slide on a horizontal surface</li><li>The total volume of mercury is $V_{\ell} = 5 \mathrm{L}$</li></ul><p>The position of mass $M$ is referenced by coordinate $x$ of its center of mass. We consider solid friction between the horizontal support and mass $M$; the magnitude of this force when sliding is denoted $F_{\mathrm{s}}$. Two stops limit the displacement: $-X \leq x \leq X$ (with $X > 0$).</p><p><strong>System Parameters:</strong></p><ul><li>Cistern: height $H_{\mathrm{c}} = 30 \mathrm{cm}$, cross-section $S_{\mathrm{c}} = 210 \mathrm{cm}^{2}$</li><li>Tubular part: height $H_{\mathrm{t}} = 80 \mathrm{cm}$, cross-section $S_{\mathrm{t}} = 5 \mathrm{cm}^{2}$</li><li>Bulb part: height $H_{\mathrm{b}} = 20 \mathrm{cm}$, cross-section $S_{\mathrm{b}} = 200 \mathrm{cm}^{2}$</li><li>Atmospheric pressure amplitude $A = 5 \times 10^{2} \mathrm{Pa}$, period $\tau_{1} = 1$ week</li></ul><p>In the real Cox's timepiece, energy is stored using a system of ratchets and used to raise a counterweight. In this simplified model, the energy recovered corresponds to the energy dissipated by friction on mass $M$. Let $W$ denote the energy dissipated by friction during one period $\tau_{1}$. $F_{\mathrm{s}}$ and $X$ can be adjusted to maximize the energy $W$; we denote their optimal values as $F_{\mathrm{s}}^{\star}$ and $X^{\star}$.</p>"><h4>背景：Cox 的时钟</h4><p>1765年，英国钟表匠 James Cox 发明了一种唯一能量来源是大气压波动的时钟。Cox 的时钟使用两个装有水银的容器。大气压的变化导致水银在容器之间移动，两个容器相对移动，这种运动为实际时钟提供能量。</p><h4>Part C - Cox 的时钟简化模型</h4><p>我们研究一个简化版本，包括：</p><ul><li>一个圆柱形底部水槽，装有水银浴</li><li>一个双部分气压管，浸入水银浴中（完全排空空气）</li><li>水槽和双部分管各由一根缆绳悬挂，两根缆绳通过理想滑轮系统连接到同一个质量为 $M$ 的物体，该物体可在水平表面上滑动</li><li>系统中水银的总体积为 $V_{\ell} = 5 \mathrm{L}$</li></ul><p>质量 $M$ 的位置由其质心坐标 $x$ 表示。考虑水平支撑面与质量 $M$ 之间的固体摩擦，滑动时的摩擦力大小记为 $F_{\mathrm{s}}$。两个挡块限制质量 $M$ 的位移为 $-X \leq x \leq X$（$X > 0$）。</p><p><strong>系统参数：</strong></p><ul><li>水槽：高度 $H_{\mathrm{c}} = 30 \mathrm{cm}$，截面积 $S_{\mathrm{c}} = 210 \mathrm{cm}^{2}$</li><li>管状部分：高度 $H_{\mathrm{t}} = 80 \mathrm{cm}$，截面积 $S_{\mathrm{t}} = 5 \mathrm{cm}^{2}$</li><li>球状部分：高度 $H_{\mathrm{b}} = 20 \mathrm{cm}$，截面积 $S_{\mathrm{b}} = 200 \mathrm{cm}^{2}$</li><li>大气压振幅 $A = 5 \times 10^{2} \mathrm{Pa}$，周期 $\tau_{1} = 1$ 周</li></ul><p>在实际的 Cox 时钟中，机构提供的能量通过棘轮系统储存并用于提升配重。在这个简化模型中，时钟回收的能量对应于水平表面对质量 $M$ 施加的摩擦力所耗散的能量。记 $W$ 为一个周期 $\tau_{1}$ 内固体摩擦力耗散的能量。在其他条件不变的情况下，可以调整 $F_{\mathrm{s}}$ 和 $X$ 来最大化能量 $W$；我们将最优情况下的各自值记为 $F_{\mathrm{s}}^{\star}$ 和 $X^{\star}$。</p></div>
+                    
+                    <div class="problem-question" data-i18n="casestudy.problem.question"
+                         data-i18n-zh="<strong>问题 (C.4)：</strong>考虑 $S_{\mathrm{b}} \simeq S_{\mathrm{c}}$ 和 $S_{\mathrm{t}} \ll S_{\mathrm{b}}$，确定 (1) $F_{\mathrm{s}}^{\star}$ 和 (2) $X^{\star}$ 关于 $\rho, g, S_{\mathrm{c}}$ 和 $A$ 的表达式。(3) 表达相应的最大能量 $W^{\star}$，(4) 然后在 $A = 5 \times 10^{2} \mathrm{Pa}$ 时计算其以 $\mathrm{mJ}$ 为单位的数值。"
+                         data-i18n-en="<strong>Question (C.4):</strong> Considering $S_{\mathrm{b}} \simeq S_{\mathrm{c}}$ and $S_{\mathrm{t}} \ll S_{\mathrm{b}}$, determine the expressions for (1) $F_{\mathrm{s}}^{\star}$ and (2) $X^{\star}$ as functions of $\rho, g, S_{\mathrm{c}}$ and $A$. (3) Express the corresponding maximum energy $W^{\star}$, (4) then calculate its numerical value in $\mathrm{mJ}$ with $A = 5 \times 10^{2} \mathrm{Pa}$."><strong>问题 (C.4)：</strong>考虑 $S_{\mathrm{b}} \simeq S_{\mathrm{c}}$ 和 $S_{\mathrm{t}} \ll S_{\mathrm{b}}$，确定 (1) $F_{\mathrm{s}}^{\star}$ 和 (2) $X^{\star}$ 关于 $\rho, g, S_{\mathrm{c}}$ 和 $A$ 的表达式。(3) 表达相应的最大能量 $W^{\star}$，(4) 然后在 $A = 5 \times 10^{2} \mathrm{Pa}$ 时计算其以 $\mathrm{mJ}$ 为单位的数值。</div>
                 </div>
             </div>
 
